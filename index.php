@@ -30,6 +30,8 @@
         <br><br>
         <input type="submit" value="Sign Up">
 
+    <!-- <br><br>
+    <a href="./scraper.php">scraper</a> -->
   <?php
     $host = 'localhost';
     $dbusername = 'root';
