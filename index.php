@@ -34,7 +34,7 @@
     $host = 'localhost';
     $dbusername = 'root';
     $dbpassword = '';
-    $database = 'practicedb';
+    $database = 'chat_app';
 
     $connection = mysqli_connect($host, $dbusername, $dbpassword, $database);
 

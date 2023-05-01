@@ -5,7 +5,7 @@ session_start();
 $host = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
-$database = 'practicedb';
+$database = 'chat_app';
 $connection = mysqli_connect($host, $dbusername, $dbpassword, $database);
 
 // Check if the connection is successful
@@ -32,15 +32,15 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['username'] = $user['username'];
 
         // Redirect to the welcome page
-        header("Location: welcome.php");
+        header("Location: chat.php");
         exit;
     } else {
         // Display an error message for an incorrect password
-        echo "Incorrect password. Please try again.";
+        echo "Incorrect password. Please try again. <a href='index.php'>Go back</a>";
     }
 } else {
     // Display an error message for a non-existent username
-    echo "Username not found. Please try again.";
+    echo "Username not found. Please try again. <a href='index.php'>Go back</a>";
 }
 
 // Close the connection

@@ -5,7 +5,7 @@ session_start();
 $host = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
-$database = 'practicedb';
+$database = 'chat_app';
 $connection = mysqli_connect($host, $dbusername, $dbpassword, $database);
 
 // Check if the connection is successful
@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['username'] = $username;
 
         // Redirect to the welcome page
-        header("Location: welcome.php");
+        header("Location: chat.php");
         exit;
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($connection);
